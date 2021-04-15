@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Search from './Search/Search';
 import Results from './Results/Results';
+import fetchResults from './util';
 
 class App extends React.Component {
   constructor() {
@@ -15,20 +16,10 @@ class App extends React.Component {
   }
 
   getResults(searchTerm) {
-
-    var requestOptions = {
-      method: 'GET',
-      headers: {
-        "Authorization": "Bearer EiM7V1DDoVrAa5BvZbnCEhJUNvpWFVjjEcet4BfotoXl8l_aiKrPx_NfDFRWlBef2Imr5FKmnWMqWhs017ac95dSFDI_otKeeEuvsfkobVQEieRaiLOOSEJECjR2YHYx"
-      },
-      redirect: 'follow'
-    };
-
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=parking&location=${searchTerm}`, requestOptions)
-      .then(response => response.json())
-      .then(result => this.setState({results: result.businesses}))
-      .catch(error => console.log('error', error));
+    fetchResults(searchTerm)
+      .then(res => this.setState({results: res.businesses}))
   }
+  
 
   render() {
     return (

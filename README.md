@@ -23,7 +23,7 @@ HTTPS
 
 SSH
 
-`git@github.com:mattdeann/lowest-lots.git`
+`git clone git@github.com:mattdeann/lowest-lots.git`
 
 
 #### Move into the repo

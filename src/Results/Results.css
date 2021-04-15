@@ -1,0 +1,13 @@
+.lot-card {
+  background-color: #FA824C;
+  border-radius: 10px;
+  width: 80vw;
+  padding: 10px;
+  margin: 20px;
+}
+
+.lot-image {
+  height: 200px;
+  width: 400px;
+  object-fit: cover;
+}

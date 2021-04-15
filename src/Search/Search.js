@@ -17,7 +17,7 @@ const Search = ({getResults}) => {
 
   return(
     <form onSubmit={handleSubmit} className='search-form'>
-      <input onChange={handleChange} value={searchTerm} className='search-bar' />
+      <input placeholder="Enter a Location" onChange={handleChange} value={searchTerm} className='search-bar' />
       <button type='submit'>Search for Lots</button>
     </form>
   )
